@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="15" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.citypulseportal.ManagementDashboardController"
+      style="-fx-padding: 20;">
+
+    <!-- ✅ This is the missing label -->
+    <Label fx:id="messageLabel" text="Welcome!" style="-fx-font-size: 18;"/>
+
+    <Label text="Management Dashboard" style="-fx-font-size: 20; -fx-font-weight: bold;" />
+
+    <Button text="Manage Categories" onAction="#handleManageCategories" />
+    <Button text="Monitor Cameras" onAction="#handleMonitorCameras" />
+    <Button text="View Usage Reports" onAction="#handleViewReports" />
+</VBox>

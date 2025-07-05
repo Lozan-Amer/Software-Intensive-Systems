@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.citypulseportal.OwnerWelcomeController"
+      style="-fx-padding: 40">
+    <Label fx:id="welcomeLabel" style="-fx-font-size: 22px;" />
+    <Button text="Update Business Info" onAction="#handleUpdateInfo" />
+</VBox>

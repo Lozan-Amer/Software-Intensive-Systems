@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.citypulseportal.ManageCategoriesController"
+      alignment="TOP_CENTER" style="-fx-padding: 20;">
+
+    <Label text="Manage Categories" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <ListView fx:id="categoryListView" prefHeight="200" prefWidth="250"/>
+
+    <HBox spacing="10">
+        <TextField fx:id="newCategoryField" promptText="New Category"/>
+        <Button text="Add" onAction="#handleAddCategory"/>
+        <Button text="Remove" onAction="#handleRemoveCategory"/>
+    </HBox>
+
+    <Button text="Save" onAction="#handleSaveCategories"/>
+    <Label fx:id="statusLabel" textFill="green"/>
+</VBox>

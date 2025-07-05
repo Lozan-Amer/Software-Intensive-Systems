@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.citypulseportal.OwnerDashboardController"
+      style="-fx-padding: 20;">
+    <Label text="Business Owner Dashboard" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="businessNameField" promptText="Business Name"/>
+    <TextField fx:id="phoneField" promptText="Phone"/>
+    <TextField fx:id="addressField" promptText="Address"/>
+    <TextField fx:id="openingHoursField" promptText="Opening Hours"/>
+    <TextArea fx:id="promotionsArea" promptText="Promotions" prefRowCount="3"/>
+
+    <ImageView fx:id="businessImageView" fitWidth="200" preserveRatio="true"/>
+    <Button text="Upload Image" onAction="#handleUploadImage"/>
+    <Button fx:id="saveButton" text="Save Changes" onAction="#handleSave"/>
+</VBox>

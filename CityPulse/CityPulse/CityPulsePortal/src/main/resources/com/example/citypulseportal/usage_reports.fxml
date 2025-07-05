@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.citypulseportal.UsageReportsController"
+      spacing="15" alignment="CENTER" style="-fx-padding: 20;">
+
+    <Label text="Usage Reports" style="-fx-font-size: 20; -fx-font-weight: bold;" />
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Select report type:"/>
+        <ComboBox fx:id="reportTypeComboBox" prefWidth="250"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Select date:"/>
+        <DatePicker fx:id="reportDatePicker"/>
+    </HBox>
+
+    <Button text="Generate Report" onAction="#handleGenerateReport" prefWidth="200"/>
+
+    <TextArea fx:id="reportResultArea" prefRowCount="10" prefWidth="400" wrapText="true" editable="false"/>
+
+    <Label fx:id="statusLabel" text="" style="-fx-text-fill: green;"/>
+
+</VBox>
