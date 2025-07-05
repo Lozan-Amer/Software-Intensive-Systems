@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.citypulse.QRController"
+      alignment="CENTER" spacing="20"
+      style="-fx-background-color: rgba(255, 255, 255, 0.95);"
+      prefWidth="400" prefHeight="500">
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <ImageView fx:id="qrImage" fitWidth="250" preserveRatio="true"/>
+    <Label fx:id="codeLabel" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+</VBox>

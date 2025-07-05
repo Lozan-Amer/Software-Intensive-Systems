@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.citypulse.SUC2Controller"
+           prefWidth="1200" prefHeight="800" maxWidth="1200" maxHeight="800">
+
+    <!-- רקע -->
+    <ImageView fx:id="backgroundImage" fitWidth="1200" fitHeight="800" preserveRatio="false" opacity="0.3">
+        <image>
+            <Image url="@images/background.jpg"/>
+        </image>
+    </ImageView>
+
+    <!-- תוכן על הרקע -->
+    <HBox alignment="CENTER" spacing="0" maxWidth="1200" maxHeight="800">
+
+        <!-- צד שמאל: ממשק קטגוריות ומקומות -->
+        <VBox spacing="15" alignment="TOP_LEFT" prefWidth="320"
+              style="-fx-background-color: rgba(0,0,0,0.6); -fx-background-radius: 10;">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="SELECT CATEGORY" style="-fx-font-weight: bold; -fx-text-fill: white;"/>
+            <ComboBox fx:id="categoryComboBox"/>
+
+            <Label text="PLACES" style="-fx-font-weight: bold; -fx-text-fill: white;"/>
+            <ListView fx:id="placesListView" prefHeight="150"/>
+
+            <Button text="Add Place" onAction="#handleAddPlace"/>
+
+            <Label text="SELECTED PLACES" style="-fx-font-weight: bold; -fx-text-fill: white;"/>
+            <ListView fx:id="selectedPlacesListView" prefHeight="150"/>
+
+            <Button text="Generate Route" onAction="#handleGenerateRoute"/>
+            <Button fx:id="continueOnMobileButton" text="Continue on your mobile" visible="false" onAction="#handleContinueOnMobile"/>
+
+        </VBox>
+
+        <!-- צד ימין: תצוגת פרטי מקום -->
+        <VBox fx:id="placeDetailsBox" spacing="10" alignment="TOP_CENTER" prefWidth="880"
+              style="-fx-background-color: rgba(0,0,0,0.6); -fx-background-radius: 10; -fx-padding: 20;"/>
+    </HBox>
+</StackPane>
